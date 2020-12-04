@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task3.1</title>
+	<style>
+		input {
+			width: 400px;
+		}
+	</style>
+	<script>
+		function go(elem){
+			elem.value = 'Text changed';
+		}
+		function stop(elem){
+			elem.value = 'Press me';
+		}
+	</script>
+</head>
+<body>
+	<input type="text" value="You pressed me!" onfocus="go(this)" onblur="stop(this)">
+</body>
+</html>

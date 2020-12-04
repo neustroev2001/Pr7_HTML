@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task4.1</title>
+	<style>
+		input {
+			width: 100px;
+		}
+	</style>
+	<script>
+		function go(){
+			elem = document.getElementById('test');
+			elem.value = 'Text changed';
+			elem.style.width = '300px';
+			elem.style.height = '50px';
+			elem.style.color = 'green';
+			elem.style.borderRadius = '10px';
+		}
+	</script>
+</head>
+<body style="height: 150px;">
+	<input type="text" value="Текст" id="test"> <br><br>
+	<button onclick="go()">Press</button>
+</body>
+</html>

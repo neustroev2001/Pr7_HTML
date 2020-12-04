@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task6.1</title>
+	<style>
+		input {
+			width: 200px;
+		}
+	</style>
+	<script>
+		function go(){
+			var elements = document.getElementsByTagName('p');
+			for (var i = 0; i < elements.length; i++){
+				elements[i].innerHTML = 'Изменено';
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>
+		first
+	</p>
+	<p>
+        second
+ 	</p>
+	<h2>third</h2>
+	<input type="submit" value="Press"  onclick="go()">
+</body>
+</html>

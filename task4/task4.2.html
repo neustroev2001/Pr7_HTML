@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task4.2</title>
+	<style>
+		input {
+			width: 400px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script>
+		function block(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Blocked';
+			block.disabled = true;
+			unblock.style.display = 'block';
+		}
+		function unblock(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Unblocked';
+			block.disabled = false;
+			unblock.style.display = 'none';
+		}
+	</script>
+</head>
+<body>
+	<input type="submit" onclick="block(this)" value="Press" id="block">
+	<input type="submit" onclick="unblock('button')" value="click to unblock" style="display: none;" id="unblock">
+</body>
+</html>

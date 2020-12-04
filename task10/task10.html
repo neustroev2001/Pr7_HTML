@@ -1,0 +1,76 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+	<link rel="stylesheet" href="messages.css"> 
+	<meta charset="utf-8"> 
+	<title>task10</title>
+	<style>
+    body { 
+margin: 10px auto; 
+width: 470px; 
+} 
+
+h3 { 
+margin: 0; 
+padding-bottom: .3em; 
+padding-right: 20px; 
+font-size: 1.1em; 
+} 
+
+p { 
+margin: 0; 
+padding: 0 0 .5em; 
+} 
+
+.pane { 
+background: darkred; 
+padding: 10px 20px 10px; 
+border-top: solid 2px #FFFFFF; 
+position: relative; 
+} 
+
+.remove-button { 
+position: absolute; 
+font-size: 110%; 
+top: 0; 
+color: black; 
+right: 10px; 
+display: block; 
+width: 24px; 
+height: 24px; 
+border: none; 
+background: transparent; 
+cursor: pointer; 
+}
+    </style>
+</head> 
+
+<body> 
+
+<div> 
+<div class="pane"> 
+<h3>Один</h3> 
+<p>О́дин, или Во́тан — верховный бог в германо-скандинавской мифологии, отец и предводитель асов, сын Бора и Бестлы, внук Бури.</p> 
+</div> 
+<div class="pane"> 
+<h3>Два</h3> 
+<p>Часть речи слова двумя — имя числительное</p> 
+</div> 
+<div class="pane"> 
+<h3>Три</h3> 
+<p>«Три кота» — это история о повседневной жизни, отношениях и приключениях трех маленьких любознательных котят: Коржика, Компота и их младшей сестренки...</p> 
+</div> 
+</div> 
+
+
+<script> 
+let panes = document.querySelectorAll('.pane'); 
+
+for(let pane of panes) { 
+pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>'); 
+pane.firstChild.onclick = () => pane.remove(); 
+} 
+</script> 
+
+</body> 
+</html>
