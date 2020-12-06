@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>task12</title> 
+  <style>
+    .tree span:hover {
+      font-weight: bold;
+    }
+    .tree span {
+      cursor: pointer;
+    }
+  </style>
+  <meta charset="utf-8">
+</head>
+<body>
+  <ul class="tree" id="tree">
+    <li>Предметы
+      <ul>
+        <li>Гуманитарные
+          <ul>
+            <li>Русский язык</li>
+            <li>Литература</li>
+            <li>Право</li>
+            <li>История</li>
+          </ul>
+        </li>
+        <li>Инженерные
+          <ul>
+            <li>Математика</li>
+            <li>Информатика</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Животные
+      <ul>
+        <li>Домашние
+          <ul>
+            <li>Кошки</li>
+            <li>Собаки</li>
+          </ul>
+        </li>
+        <li>Дикие
+          <ul>
+            <li>Лиса</li>
+            <li>Волк</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    for (let li of tree.querySelectorAll('li')) {
+      let span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling); }
+    tree.onclick = function(event) {
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+      let childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return; 
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+</body>
+</html>

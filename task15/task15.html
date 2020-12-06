@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>task15</title>
+  <link rel="stylesheet" href="gallery.css">
+  <meta charset="utf-8">
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  font: 75%/120% sans-serif;
+}
+
+h2 {
+  font: bold 190%/100% sans-serif;
+  margin: 0 0 .2em;
+}
+
+h2 em {
+  font: normal 80%/100% sans-serif;
+  color: black;
+}
+
+#largeImg {
+  border: solid 1px #ccc;
+  width: 550px;
+  height: 400px;
+  padding: 5px;
+}
+
+#thumbs a {
+  border: solid 1px #ccc;
+  width: 100px;
+  height: 100px;
+  padding: 3px;
+  margin: 2px;
+  float: left;
+}
+
+#thumbs a:hover {
+  border-color: yellow;
+}
+
+#thumbs li {
+  list-style: none;
+}
+
+#thumbs {
+  margin: 0;
+  padding: 0;
+}</style>
+</head>
+<body>
+  <p><img id="largeImg" src="https://faunistics.com/wp-content/uploads/2019/05/15.jpg" alt="Large image"></p>
+  <ul id="thumbs">
+    <li>
+      <a href="https://mtdata.ru/u29/photoA17E/20800581609-0/original.jpg" title="Image 2"><img src="https://mtdata.ru/u29/photoA17E/20800581609-0/original.jpg" height="100" width="100"></a>
+    </li>
+    <li>
+      <a href="https://allegroplus.ru/wp-content/uploads/2018/10/Kopengagen-Daniya.jpg" title="Image 3"><img src="https://allegroplus.ru/wp-content/uploads/2018/10/Kopengagen-Daniya.jpg" height="100" width="100"></a>
+    </li>
+    <li>
+      <a href="https://www.jenmansafaris.com/wp-content/uploads/2017/08/LDA-Sand-Diving-Lizard-1024x734.jpg" title="Image 4"><img src="https://www.jenmansafaris.com/wp-content/uploads/2017/08/LDA-Sand-Diving-Lizard-1024x734.jpg" height="100" width="100"></a>
+    </li>
+    <li>
+      <a href="http://faunazoo.ru/wp-content/uploads/2018/02/%D0%96%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B8%D1%80-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C.jpg" title="Image 5"><img src="http://faunazoo.ru/wp-content/uploads/2018/02/%D0%96%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B8%D1%80-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C.jpg" height="100" width="100"></a>
+    </li>
+    <li>
+      <a href="https://i0.wp.com/img-fotki.yandex.ru/get/117578/137106206.762/0_1f23cf_fa5afee_orig.jpg" title="Image 6"><img src="https://i0.wp.com/img-fotki.yandex.ru/get/117578/137106206.762/0_1f23cf_fa5afee_orig.jpg" height="100" width="100"></a>
+    </li>
+  </ul>
+  <script>
+    thumbs.onclick = function(event) {
+      let thumbnail = event.target.closest('a');
+      if (!thumbnail) return;
+      showThumbnail(thumbnail.href, thumbnail.title);
+      event.preventDefault();
+    }
+    function showThumbnail(href, title) {
+      largeImg.src = href;
+      largeImg.alt = title;
+    }
+  </script>
+</body>
+</html>
